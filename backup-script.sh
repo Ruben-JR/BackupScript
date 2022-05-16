@@ -14,7 +14,7 @@ REMOTE_BKP_FOLDER="/home/ruben/backup"
 REMOTE_HOST="ninhu.duckdns.org"
 #
 # su tiver um pasta temporatio ku kre fazi backup tb, mas delete alguns cenas antigo antes, descomenta kel for li, e comenta kel ki sta descomentado.
-#for i in $TMP_DIR $DOWNLOAD_DIR ; 
+#for i in $TMP_DIR $DOWNLOAD_DIR ;
 for i in $DOWNLOAD_DIR/ ;
         # keli ta busca files dentu pasta Download ki teni mas di 10 dia, e delete antes fazi backup.
         find $i -type f -mtime +7 -exec rm -rf {} \;
@@ -30,4 +30,4 @@ ssh -l $REMOTE_USER $REMOTE_HOST "find $REMOTE_BKP_FOLDER/* -type f -mtime +15 -
 rsync -avz $BACKUP_DIR/$BACKUP_NAME-$DATE.$EXTENTION $REMOTE_USER@$REMOTE_HOST:$REMOTE_BKP_FOLDER/
 
 #keli ta remove backup di bu PC, dipos di copial pa servidor remoto.
-rm -rf $BKP   
+rm -rf $BKP
