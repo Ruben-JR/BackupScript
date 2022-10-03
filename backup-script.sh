@@ -19,6 +19,7 @@ REMOTE_HOST="86.161.72.137"
 #    done;
 
 tar -cJpf $BKP $HOME/{.config/nvim,.zshrc,.zsh_history,Documents,.ssh}
+
 #tar -cJpf $BKP $HOME/{Documents,Downloads,Videos,.config/{nvim,sops/,qmk,Joplin,joplin-desktop},.zshrc,.zsh_history}
 #
 #
