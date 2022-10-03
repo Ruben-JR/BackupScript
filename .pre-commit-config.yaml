@@ -1,25 +1,11 @@
 repos:
-  - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.1.0
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.3.0
     hooks:
-      - id: check-yaml
-      - id: end-of-file-fixer
-      - id: trailing-whitespace
-  - repo: https://github.com/psf/black
+    -   id: check-yaml
+    -   id: end-of-file-fixer
+    -   id: trailing-whitespace
+-   repo: https://github.com/psf/black
     rev: 22.3.0
     hooks:
-      - id: black
-  - repo: https://github.com/digitalpulp/pre-commit-php
-    rev: 1.4.0
-    hooks:
-      - id: php-lint
-  - repo: https://github.com/pryorda/dockerfilelint-precommit-hooks
-    rev: v0.1.0
-    hooks:
-      - id: dockerfilelint
-        stages: [commit]
-  - repo: https://github.com/IamTheFij/docker-pre-commit
-    rev: v2.1.0
-    hooks:
-      - id: docker-compose-check
-        stages: [commit]
+    -   id: black
